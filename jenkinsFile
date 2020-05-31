@@ -3,13 +3,14 @@ pipeline{
     stages{
         stage("Git Checkout"){
             steps("SCM"){
-                git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
+                git 'https://github.com/jitpack/maven-simple.git'
             }
         }
         stage("maven build"){
-           steps("MVN"){
-               sh  "maven clean package"
-           }
+            steps("Maven"){
+                bat 'mvn clean package'
+            }
+        
         }
     }
 }
