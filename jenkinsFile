@@ -6,5 +6,10 @@ pipeline{
                 git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
             }
         }
+        stage("maven build"){
+           steps("MVN"){
+               sh  "maven clean package"
+           }
+        }
     }
 }
