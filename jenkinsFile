@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Git Checkout"){
             steps("SCM"){
-                git 'https://github.com/jitpack/maven-simple.git'
+                git 'https://github.com/sri476/pipeline.git'
             }
         }
         stage("maven build"){
