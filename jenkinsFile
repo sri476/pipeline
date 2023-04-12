@@ -8,7 +8,7 @@ pipeline{
         }
         stage("maven build"){
             steps("Maven"){
-                bat 'mvn clean package'
+                bat mvn 'clean package'
             }
         
         }
